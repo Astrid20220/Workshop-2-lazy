@@ -9,13 +9,14 @@ const loadImage = (entry) => {
     const imgNode = entry.target;
     const imagen = imgNode.firstChild;
     const url = imagen.dataset.src;
+
     imagen.src = url;
 
         loadedImages += 1;
         logState();
     
-    observer.unobserve(imgNode);
-};
+        observer.unobserve(imgNode);
+    };
 
 const observer = new IntersectionObserver((entries) => {
     entries
