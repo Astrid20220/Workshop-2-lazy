@@ -30,3 +30,7 @@ import { registerImage } from "./lazy.js";
 
    addButton.addEventListener("click", addImage);
    
+   const clean = document.querySelector("button[type='reset']");
+   clean.addEventListener("click", () => {
+     mountNode.innerHTML = "";
+   });
